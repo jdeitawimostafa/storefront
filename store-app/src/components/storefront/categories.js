@@ -6,8 +6,6 @@ const Categories = (props) => {
     let categoriesToMap = props.category.categories;
   return (
     <div>
-       
-        <h2>My Categories component.</h2>
         <ul>
           {categoriesToMap.map((category) => {
             return (

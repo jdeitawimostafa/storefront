@@ -5,7 +5,7 @@ import { BrowserRouter as Router} from 'react-router-dom';
 import Footer  from './components/footer/footer';
 import Categories from './components/storefront/categories';
 import Product from './components/storefront/products';
-// import currentCategory from './components/storefront/current-category';
+import currentCategory from './components/storefront/current-category';
 
 function App() {
   return (

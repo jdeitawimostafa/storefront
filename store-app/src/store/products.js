@@ -43,7 +43,7 @@ const initialState = {
           let productsToDisplay = state.products.filter((product) => {
             return product.category === targetCategory;
           });
-          // console.log('DISPLAY PRODS', productsToDisplay);
+          console.log('DISPLAY PRODS', productsToDisplay);
           return { ...state, productsToDisplay };
         default:
           return state;
@@ -56,3 +56,20 @@ const initialState = {
       payload: name,
     };
   };
+
+  export const add = (payload) => {
+    return {
+      type:'ADD_PRODUCT',
+      payload,
+    }
+  }
+
+  export const remove = (payload) => {
+    return {
+      type:'DELETE',
+      payload,
+    }
+  }
+
+
+

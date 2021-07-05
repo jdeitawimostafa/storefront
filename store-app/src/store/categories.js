@@ -12,7 +12,7 @@ const initialState = {
         },
     ],
 
-    activeCategory:'electronics'
+    activeCategory:''
 }
 
 export default (state = initialState, action) => {

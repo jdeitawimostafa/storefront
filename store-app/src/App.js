@@ -2,11 +2,10 @@ import React from 'react';
 import Header from './components/header/header';
 import { Route, Switch } from 'react-router-dom';
 import { BrowserRouter as Router} from 'react-router-dom';
-import Cart  from './components/ cart/simplecart';
 import Footer  from './components/footer/footer';
 import Categories from './components/storefront/categories';
 import Product from './components/storefront/products';
-// import currentCategory from './components/storefront/current-category';
+import CurrentCategory from './components/storefront/current-category';
 
 function App() {
   return (
@@ -17,9 +16,9 @@ function App() {
         <Switch>
           <Route exact path = "/">
           </Route>
-          <Route exact path = "/cart" component = {Cart}></Route>
         </Switch>
         <h1>Browse our Categories</h1>
+        <CurrentCategory/>
         <Categories/>
         <Product/>
       <Footer/>

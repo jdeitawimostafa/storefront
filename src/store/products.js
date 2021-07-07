@@ -1,3 +1,4 @@
+
 const initialState = {
     products: [
       {
@@ -35,16 +36,26 @@ const initialState = {
 
   export default (state = initialState,action) => {
       let {type,payload} = action;
-
+      console.log('state from line 40',state);
       switch (type) {
-        case 'change':
+        case 'GET':
           console.log('line 41', payload);
-          let targetCategory = payload.name;
-          let productsToDisplay = state.products.filter((product) => {
-            return product.category === targetCategory;
-          });
-          console.log('DISPLAY PRODS', productsToDisplay);
-          return { ...state, productsToDisplay };
+          let targetCategory = payload.results;
+          // console.log('line 45', targetCategory[0]);
+          // let productsCat = payload.results[0].category;
+          // let productsToDisplay = targetCategory[0].map((product) => {
+          //   let filteringData = product.filter((items) => {
+          //     return items.category === productsCat;
+          //   })
+          //   return filteringData;
+          // });
+
+          // console.log('DISPLAY PRODS', productsToDisplay);
+          return { ...state, data:[...state.productsToDisplay,...targetCategory]  };
+         
+          // case 'GET':
+          //   console.log('line 51 from products api',payload);
+          //   return payload;
         default:
           return state;
       }
@@ -70,6 +81,3 @@ const initialState = {
       payload,
     }
   }
-
-
-

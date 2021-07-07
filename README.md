@@ -20,3 +20,7 @@ The following user/developer stories detail the major functionality for this pha
 ### UML DIAGRAM : 
 
 ![image](./36.png)
+
+### deployment : 
+
+[deplyment link](https://pensive-borg-6365dd.netlify.app/)

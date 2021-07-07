@@ -9,6 +9,10 @@ import CurrentCategory from './components/storefront/current-category';
 import Simplecart from './components/cart/simplecart';
 import {Paper} from '@material-ui/core';
 import './app.scss';
+import Details from './components/products/details';
+// import { Link } from 'react-router-dom';
+
+
 
 function App() {
   return (
@@ -24,6 +28,7 @@ function App() {
         <Switch>
           <Route exact path = "/">
           </Route>
+          <Route exact path='/detail' component={Details}></Route>
         </Switch>
         <h1>Browse our Categories</h1>
         <Categories/>

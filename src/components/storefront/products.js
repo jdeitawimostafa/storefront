@@ -15,6 +15,7 @@ const Products = (props) => {
               <Button variant="text" onClick={() => props.add(product)} key={product.price} >Add To Cart</Button>
                 <strong> {product.name} </strong>
                 <span key={product.price}> {product.price}</span>
+                <img src={product.image} alt={product.name} height='40' width='40'></img>
               </li>
             </div>
           );

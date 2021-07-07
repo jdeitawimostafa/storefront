@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { changeActiveCategory } from '../../store/products';
+import { Button } from '@material-ui/core';
 
 const Categories = (props) => {
     let categoriesToMap = props.category.categories;
@@ -9,9 +10,9 @@ const Categories = (props) => {
         <ul>
           {categoriesToMap.map((category) => {
             return (
-              <button key={category.displayName} onClick={() => props.changeActiveCategory(category)}>
+              <Button variant="outlined" key={category.displayName} onClick={() => props.changeActiveCategory(category)}>
                 {category.displayName}
-              </button>
+              </Button>
             );
           })}
         </ul>
